@@ -35,7 +35,7 @@ yarn dev
 
 ## Author
 
-👤 **Eduardo Alves Leonardo **
+👤 ** Eduardo Alves Leonardo **
 
 * Github: [@edleonardo](https://github.com/edleonardo)
 * LinkedIn: [@eduardo-alves-leonardo](https://linkedin.com/in/eduardo-alves-leonardo)
