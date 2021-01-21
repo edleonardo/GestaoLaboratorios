@@ -6,17 +6,20 @@ import Laboratorio from '../models/Laboratorio'
 import laboratorioView from '../views/laboratorio_view'
 
 async function validaLaboratorio (laboratorio: { nome: string, endereco: string, ativo: boolean}, response: Response) {
-  const laboratorioRepository = getRepository(Laboratorio)
-  const laboratorioRepetido = await laboratorioRepository.find({ where: { nome: laboratorio.nome }})
-  if (laboratorioRepetido.length) return response.status(400).json({ error: 'Não é possível cadastrar nomes repetidos' })
+  try {
+    const laboratorioRepository = getRepository(Laboratorio)
+    const laboratorioRepetido = await laboratorioRepository.find({ where: { nome: laboratorio.nome }})
+    if (laboratorioRepetido.length) return response.status(400).json({ error: 'Não é possível cadastrar nomes repetidos' })
 
-  const schema = Yup.object().shape({
-    nome: Yup.string().required(),
-    endereco: Yup.string().required(),
-    ativo: Yup.boolean().required()
-  })
-  await schema.validate(laboratorio, { abortEarly: false })
-
+    const schema = Yup.object().shape({
+      nome: Yup.string().required(),
+      endereco: Yup.string().required(),
+      ativo: Yup.boolean().required()
+    })
+    await schema.validate(laboratorio, { abortEarly: false })
+  } catch (error) {
+    return response.status(500).json({ error: 'Ocorreu um erro interno'})    
+  }
 }
 
 export default {

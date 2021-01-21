@@ -7,16 +7,20 @@ import TipoExame from '../models/TipoExame'
 import exameView from '../views/exame_view'
 
 async function validaExame (exame: { nome: string, tipo: TipoExame, ativo: boolean }, response: Response) {
-  const exameRepository = getRepository(Exame)
-  const exameRepetido = await exameRepository.find({ where: { nome: exame.nome }})
-  if (exameRepetido.length) return response.status(400).json({ error: 'Não é possível cadastrar nomes repetidos' })
+  try {
+    const exameRepository = getRepository(Exame)
+    const exameRepetido = await exameRepository.find({ where: { nome: exame.nome }})
+    if (exameRepetido.length) return response.status(400).json({ error: 'Não é possível cadastrar nomes repetidos' })
 
-  const schema = Yup.object().shape({
-    nome: Yup.string().required(),
-    tipo: Yup.number().required(),
-    ativo: Yup.boolean().required()
-  })
-  await schema.validate(exame, { abortEarly: false })
+    const schema = Yup.object().shape({
+      nome: Yup.string().required(),
+      tipo: Yup.number().required(),
+      ativo: Yup.boolean().required()
+    })
+    await schema.validate(exame, { abortEarly: false })
+  } catch (error) {
+    return response.status(500).json({ error: 'Ocorreu um erro interno'})    
+  }
 }
 
 export default {
