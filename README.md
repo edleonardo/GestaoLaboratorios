@@ -17,10 +17,6 @@
 yarn
 ```
 
-```sh
-yarn typeorm migration:run
-```
-
 ## Usage
 
 ```sh
@@ -32,6 +28,7 @@ yarn dev
 * Para acessar o banco de dados, baixe a aplicação [Beekeeper Studio](https://docs.beekeeperstudio.io/installation/);
 * Abra uma nova conexão selecionando a opção o tipo "SQLite";
 * Clique em "Choose file", navegue e abra o arquivo "database.sqlite" do projeto.
+* Para mudanças na base de dados, basta alterar as migrations e rodar o comando "yarn typeorm migration:run"
 
 ## Arquitetura e Ferramentas
 
@@ -39,6 +36,7 @@ yarn dev
 * Utilização do ORM chamado TypeORM
 * Validações feitas com o Yup
 * Base de dados no SQLite
+* Aplicação foi hospedada no Heroku, porém por possíveis problemas nas configurações e dependências não é possível consumir os endpoints.
 
 ## Documentação
 
