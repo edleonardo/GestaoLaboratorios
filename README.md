@@ -10,7 +10,6 @@
 </p>
 
 > Projeto criado para fins de avaliação no processo seletivo da empresa Dasa
-> Acesse a (Documentação)[https://edleonardo.github.io/Documentacao/]
 
 ## Install
 
@@ -33,6 +32,17 @@ yarn dev
 * Para acessar o banco de dados, baixe a aplicação [Beekeeper Studio](https://docs.beekeeperstudio.io/installation/);
 * Abra uma nova conexão selecionando a opção o tipo "SQLite";
 * Clique em "Choose file", navegue e abra o arquivo "database.sqlite" do projeto.
+
+## Arquitetura e Ferramentas
+
+* Aplicação desenvolvida em TypeScript
+* Utilização do ORM chamado TypeORM
+* Validações feitas com o Yup
+* Base de dados no SQLite
+
+## Documentação
+
+* Acesse a [Documentação](https://edleonardo.github.io/Documentacao/)
 
 ## Author
 
