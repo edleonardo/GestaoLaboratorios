@@ -2,8 +2,6 @@ import { Request, Response } from 'express'
 import { getRepository, getConnection } from 'typeorm'
 import * as Yup from 'yup'
 import Associacao from '../models/Associacao'
-import Exame from '../models/Exame'
-import Laboratorio from '../models/Laboratorio'
 import associacaoView from '../views/associacao_view'
 
 export default {
