@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to DasaTest 👋</h1>
+<h1 align="center">Welcome to GestaoLaboratorios 👋</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
   <a href="xxxx" target="_blank">
@@ -9,7 +9,7 @@
   </a>
 </p>
 
-> Projeto criado para fins de avaliação no processo seletivo da empresa Dasa
+> Projeto criado para fins de estudo e treinamento na linguagem TypeScript
 
 ## Install
 
