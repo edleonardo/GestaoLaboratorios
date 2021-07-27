@@ -36,7 +36,6 @@ yarn dev
 * Utilização do ORM chamado TypeORM
 * Validações feitas com o Yup
 * Base de dados no SQLite
-* Aplicação foi hospedada no Heroku, porém por possíveis problemas nas configurações e dependências não é possível consumir os endpoints.
 
 ## Documentação
 
